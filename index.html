@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>CodeCore Project</title>
+
+  <link rel="stylesheet" href="project_styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Copy and Paste your Firebase Configuration code here! -->
+
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBiprfXK3ejV6rAtyL4cos_Hj7jbPK3aXk",
+      authDomain: "codecore-jan-2018-final-exam.firebaseapp.com",
+      databaseURL: "https://codecore-jan-2018-final-exam.firebaseio.com",
+      projectId: "codecore-jan-2018-final-exam",
+      storageBucket: "",
+      messagingSenderId: "817873838528"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- End of Firebase Configuration! -->
+
+  <!-- You can put all your JavaScript in this file project_javascript. If -->
+  <!-- you dont want to do this way, just put your javascript inside this -->
+  <!-- script tag and delete the attribute src="./project_javascript.js" -->
+  <script type="text/javascript" src="./project_javascript.js"></script>
+  <style media="screen">
+    .vg {
+      /* border: gold thick solid; */
+    }
+
+    .container {
+      display: grid;
+      width: 960px;
+    }
+
+    .card {
+      max-width: 150px;
+    }
+
+    #left-div {
+      grid-column: 1 / 2;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #right-div {
+      grid-column: 2;
+    }
+
+    #content {
+      max-width: 100%;
+    }
+
+    img {}
+  </style>
+</head>
+
+<body>
+  <ul class="nav vg">
+    <li class="nav-item">
+      <a class="nav-link active" href="#!"><img src="http://fillmurray.com/50/50" alt=""></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" href="#!">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#!">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#!">Disabled</a>
+    </li>
+  </ul>
+  <div class="container vg">
+    <div id="left-div" class="item vg">
+      <form id="image-submit">
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Image URL</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="input-imageURL">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Caption</label>
+          <div class="col-sm-10">
+            <textarea class="form-control" id="input-caption"></textarea>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10 offset-sm-2">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+      <hr>
+
+      <div id="content" class='vg'>
+
+      </div>
+
+
+    </div>
+    <div id="right-div" class="item vg">
+      <h1>News</h1>
+      <div class="card">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
