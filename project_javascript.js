@@ -35,9 +35,8 @@ $(document).ready(function() {
   thumbnailsRef.on('child_added', function(data) {
     const thumbnailId = data.key;
     const thumbnailObj = data.val();
-    $('#content').append(
-      `
-    <div class="card">
+    $('#content').append(`
+    <div class="card vg">
       <img class="card-img-top" src="${thumbnailObj.imageURL}" alt="Card image cap">
       <div class="card-body">${thumbnailObj.caption}</div>
     </div>
