@@ -36,7 +36,7 @@
   <script type="text/javascript" src="./project_javascript.js"></script>
   <style media="screen">
     .vg {
-      border: gold thick solid;
+      /* border: gold thin solid; */
     }
 
     .container {
@@ -47,24 +47,40 @@
 
     .card {
       max-width: 150px;
+      /* height: 250px; */
       display: inline-block;
+      margin: 20px;
+    }
+
+    .list-group-item {
+      margin: 5px;
+      /* width: 300px; */
+    }
+
+    .list-group .list-group-flush {
+      width: 100%;
+    }
+    #content .card {
+      border: thin black solid;
     }
 
     #left-div {
       /* grid-column: 1 / 2; */
       width: 66%;
+      padding: 20px;
     }
 
     #right-div {
       /* grid-column: 2; */
       width: 33%;
+      padding: 20px;
     }
 
     #content {
-      /* display: inline-flex; */
-      /* flex-direction: row; */
-      /* flex-wrap: wrap; */
-      /* justify-content: space-around; */
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: flex-start;
     }
   </style>
 </head>
@@ -116,11 +132,16 @@
     <div id="right-div" class="item vg">
       <h1>News</h1>
       <div class="card">
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Cras justo odio</li>
+        <ul class="list-group list-group-flush vg">
+          <li class="list-group-item vg">Cras justo odio</li>
           <li class="list-group-item">Dapibus ac facilisis in</li>
           <li class="list-group-item">Vestibulum at eros</li>
         </ul>
+
+        <!-- <div class="card-body">
+          This is some text within a card block.
+        </div> -->
+
       </div>
     </div>
   </div>
